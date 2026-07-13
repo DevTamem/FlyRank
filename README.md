@@ -98,17 +98,6 @@ GET http://localhost:3000/
 GET http://localhost:3000/time
 ```
 
-Expected responses:
-```json
-{ "message": "Hello, world!" }
-```
-
-```json
-{ "time": "2026-07-13T00:00:00.000Z" }
-```
-
----
-
 ## 📄 License
 
 This repository contains my personal work completed during the internship. Company-confidential or proprietary materials are not included.
