@@ -18,7 +18,7 @@ This repository documents my journey throughout the **FlyRank AI Engineering Int
 .
 ├── assignments/
 │   ├── week-1/
-│   │   └── api-endpoint.js
+│   │   └── CRUD.js
 │   ├── week-2/
 │   ├── week-3/
 │   ├── week-4/
@@ -52,7 +52,7 @@ This repository documents my journey throughout the **FlyRank AI Engineering Int
 
 ## 📈 Progress
 
-- [x] Week 1
+- [x] Week 1 - Todo CRUD API
 - [ ] Week 2
 - [ ] Week 3
 - [ ] Week 4
@@ -70,34 +70,52 @@ This repository documents my journey throughout the **FlyRank AI Engineering Int
 
 ## ▶️ How to Run
 
-### Week 1 — First API Endpoint
+### Week 1 — Todo CRUD API
 
-**1. Use the existing workspace:**
-If you are already working in this folder, you can skip cloning and use the existing workspace directly.
-
-**2. Navigate to the week-1 folder:**
+**1. Navigate to the week-1 folder:**
 ```bash
 cd assignments/week-1
 ```
 
-**3. Install dependencies:**
+**2. Install dependencies:**
 ```bash
 npm install
 ```
 
-**4. Start the server:**
+**3. Start the server:**
 ```bash
-node api-endpoint.js
+node CRUD.js
 ```
 
-**5. Test the endpoint:**
+**4. Test the API:**
 
-Open Postman or your browser and send a request to:
-```
-GET http://localhost:3000/
-GET http://localhost:3000/time
+You can use Postman, curl, or your browser for the root route. The API includes these endpoints:
+```text
+GET    http://localhost:3000/
+GET    http://localhost:3000/todos
+GET    http://localhost:3000/todos/:id
+POST   http://localhost:3000/todos
+PUT    http://localhost:3000/todos/:id
+PATCH  http://localhost:3000/todos/:id
+DELETE http://localhost:3000/todos/:id
 ```
 
+Example request body for creating a todo:
+```json
+{
+  "title": "Buy milk",
+  "completed": false
+}
+```
+
+Example request body for updating a todo:
+```json
+{
+  "completed": true
+}
+```
+
+The root route returns a quick summary of the available CRUD endpoints. The API keeps data in memory, so todos reset when the server restarts.
 ## 📄 License
 
 This repository contains my personal work completed during the internship. Company-confidential or proprietary materials are not included.
